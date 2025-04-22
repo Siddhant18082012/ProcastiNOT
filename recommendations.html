@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Study Methods</title>
+  <link rel="stylesheet" href="Mainweb1.css">
+  <style>
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+      gap: 20px;
+    }
+
+    .game-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .game-icon {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body class="reccomendations-page">
+  <div class="container">
+    <h1>Study Methods</h1>
+
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="ActiveRecall.png" alt="Active Recall" class="game-icon">
+        <h2>Active Recall</h2>
+        <p>Best for Memorization</p>
+      </div>
+
+      <div class="game-card">
+        <img src="Pomodoro.png" alt="Pomodoro Technique" class="game-icon">
+        <h2>Pomodoro Technique</h2>
+        <p>Helps with Focus</p>
+        <button class="home-button" onclick="window.location.href='timer.html'">Timer</button>
+      </div>
+
+      <div class="game-card">
+        <img src="Blurting.png" alt="Blurting" class="game-icon">
+        <h2>Blurting</h2>
+        <p>Strengthens Memory through Self-Testing</p>
+      </div>
+
+      <div class="game-card">
+        <img src="SpacedRepetition.png" alt="Spaced Repetition" class="game-icon">
+        <h2>Spaced Repetition</h2>
+        <p>Boosts long-term retention</p>
+        <p></p>
+      </div>
+
+      <div class="game-card">
+        <img src="SQmethod.png" alt="SQ3R" class="game-icon">
+        <h2>SQ3R</h2>
+        <p>Improved Comprehension</p>
+      </div>
+
+      <div class="game-card">
+        <img src="MindMaping.png" alt="Mind Mapping" class="game-icon">
+        <h2>Mind Mapping</h2>
+        <p>Increased Creativity</p>
+      </div>
+
+    </div>
+
+    <button class="side-button" onclick="window.location.href='Mainweb1.html'">Back to Main</button>
+  </div>
+</body>
+</html>

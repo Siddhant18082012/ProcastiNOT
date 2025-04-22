@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+body{
+    font-family:"Poppins",sans-serif;
+    background-image:url("OrangeDoodle.jpg");
+    display:flex;
+    justify-content:center;
+}
+.container{
+    width: 550px;
+    padding:50px;
+    margin-top:80px;
+    background-color:#fff;
+    box-shadow:0 5px 7px rgba(0,0,0,0.1)
+}
+h1{
+    text-align:center;
+}
+.question{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.options{
+    margin-bottom:20px;
+}
+.option{
+    display:block;
+    margin-bottom:10x;
+}
+.button{
+    display:inline-block;
+    padding:5px 20px;
+    background-color:#4a5069;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    border-radius: 4px;
+    transition:background-color 0.3s;
+    margin-right:10px;
+}
+.button:hover{
+    background-color:#68ff51;
+}
+.result{
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
+}
+.hide{
+    display:none;
+}
+.timer-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #4a5069;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Center the timer */
+    position: relative; /* To position the pseudo-element */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#timerDisplay {
+    font-size: 36px;
+    color: white;
+    z-index: 2; /* Ensure timer text is on top */
+}
+
+.timer-container:before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #68ff51;
+    z-index: 1; 
+}
+.buttons-container {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.buttons-container button {
+    background-color: #4a5069; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons-container button:hover {
+    background-color: #68ff51; 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+.hide {
+    display: none;
+}
+body.reccomendations-page .container {
+    width: 80%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+.game-card:hover{
+    width: 300px;
+}
