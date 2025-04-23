@@ -1,34 +1,53 @@
-function sendMessage() {
-    const input = document.getElementById("user-input");
-    const message = input.value.trim();
-    if (message === "") return;
+const studyTechniques = {
+    "pomodoro": "The Pomodoro Technique involves working for 25 minutes, then taking a 5-minute break. After 4 cycles, take a longer break.",
+    "sq3r": "SQ3R stands for Survey, Question, Read, Recite, Review. It's a method to help you study and retain textbook information.",
+    "active recall": "Active recall means testing yourself repeatedly to reinforce memory, instead of just rereading notes.",
+    "spaced repetition": "Spaced repetition is a learning technique that involves reviewing information at increasing intervals over time.",
+    "mind mapping": "Mind mapping is a visual way of organizing information, showing relationships between concepts using diagrams."
+  };
   
-    const chatBox = document.getElementById("chat-box");
+  const chatContainer = document.getElementById("chat-container");
+  const inputField = document.getElementById("user-input");
+  const sendButton = document.getElementById("send-button");
   
-    // Add user message
-    const userMsg = document.createElement("div");
-    userMsg.className = "user-message";
-    userMsg.textContent = message;
-    chatBox.appendChild(userMsg);
+  sendButton.addEventListener("click", () => {
+    const userMessage = inputField.value.trim();
+    if (userMessage !== "") {
+      addUserMessage(userMessage);
+      handleUserMessage(userMessage);
+      inputField.value = "";
+    }
+  });
   
-    // Simulate bot response
-    setTimeout(() => {
-      const botMsg = document.createElement("div");
-      botMsg.className = "bot-message";
-      botMsg.textContent = generateBotReply(message);
-      chatBox.appendChild(botMsg);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }, 500);
+  inputField.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendButton.click();
+    }
+  });
   
-    input.value = "";
+  function addUserMessage(message) {
+    const userBubble = document.createElement("div");
+    userBubble.className = "message user-message";
+    userBubble.textContent = message;
+    chatContainer.appendChild(userBubble);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
   }
   
-  function generateBotReply(input) {
-    const lower = input.toLowerCase();
+  function addChatbotMessage(message) {
+    const botBubble = document.createElement("div");
+    botBubble.className = "message bot-message";
+    botBubble.textContent = message;
+    chatContainer.appendChild(botBubble);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }
   
-    if (lower.includes("study")) return "Studying is tough sometimes! Want some tips?";
-    if (lower.includes("timer")) return "You can use the Pomodoro method! Want me to set a timer?";
-    if (lower.includes("hello") || lower.includes("hi")) return "Hey there! 👋";
-    
-    return "Interesting... Tell me more!";
+  function handleUserMessage(message) {
+    const lowerCaseMessage = message.toLowerCase();
+    for (const technique in studyTechniques) {
+      if (lowerCaseMessage.includes(technique)) {
+        addChatbotMessage(studyTechniques[technique]);
+        return;
+      }
+    }
+    addChatbotMessage("I'm not sure how to respond to that. Try asking about a study technique like Pomodoro or Active Recall.");
   }
