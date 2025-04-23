@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>Welcome to ProcrastiNOT</title>
+  <link rel="stylesheet" href="Mainweb1.css">
+  <style>
+    body {
+      background-image: url("OrangeDoodle.jpg"); 
+      font-family: sans-serif;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .home-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4a5069;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-button:hover {
+      background-color: #68ff51;
+      transform: translateY(-2px); 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to ProcrastiNOT</h1>
+    <p>Because "Later" Never Aced a Test.</p>
+
+    <div class="button-container">
+      <button class="home-button" onclick="window.location.href='Quiz.html'">Take the Quiz</button>
+      <button class="home-button" onclick="window.location.href='recommendations.html'">Study Methods</button>
+      <button class="home-button" onclick="window.location.href='Calendar.html'">Calendar</button>
+      <button class="home-button" onclick="window.location.href='AboutUs.html'">Guides</button>
+      <button class="home-button" onclick="window.location.href='Chatbot.html'">Chatbot</button>
+      <button class="home-button" onclick="window.location.href='Notes.html'">Notes</button>
+    </div>
+  </div>
+</body>
+</html>
